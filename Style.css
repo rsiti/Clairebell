@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+:root {
+  --bg: #1c1c1c;
+  --primary: #ff3b3b;
+  --text: #e0e0e0;
+  --tile-bg: #2a2a2a;
+  --empty-bg: #111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  text-align: center;
+  padding: 1rem;
+}
+
+header {
+  padding: 2rem 1rem;
+  border-bottom: 2px solid var(--primary);
+}
+
+h1 {
+  color: var(--primary);
+  font-size: 1.8rem;
+}
+
+h2 {
+  margin: 1.5rem 0 0.5rem;
+  color: #ff6b6b;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 0.5rem;
+}
+
+.gallery img {
+  width: 90px;
+  height: auto;
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+}
+
+.puzzle-container {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  grid-template-rows: repeat(3, 90px);
+  gap: 4px;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+.tile {
+  width: 90px;
+  height: 90px;
+  background-size: 270px 270px;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.tile.empty {
+  background-color: var(--empty-bg);
+  cursor: default;
+  border: none;
+}
+
+.tile:hover:not(.empty) {
+  transform: scale(1.03);
+}
+
+#status {
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+footer {
+  margin-top: 3rem;
+  color: #888;
+  font-size: 0.9rem;
+}
+.music-control {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+#toggle-music {
+  padding: 8px 12px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.video-section {
+  text-align: center;
+  margin: 40px 20px;
+  color: #fff;
+}
+
+.video-section h2 {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
