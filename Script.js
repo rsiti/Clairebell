@@ -92,7 +92,7 @@ function checkWin() {
 }
 
 // Jalankan
-initPuzzle("images/10.jpg");
+initPuzzle("10.jpg");
 
 // Kontrol Musik
 const audio = document.getElementById("bg-music");
